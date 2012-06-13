@@ -16,7 +16,12 @@
             "App2Store2",
             "App2Store3"
         ],
-        "name": "App2"
+        "name": "App2",
+        "designer|requires": [
+            "App1.model.App1Model",
+            "App1.store.App1Store1",
+            "App1.store.App1Store2"
+        ]
     },
     "customConfigs": [],
     "designerId": "application",

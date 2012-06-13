@@ -23,6 +23,12 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
+    requires: [
+        'App1.model.App1Model',
+        'App1.store.App1Store1',
+        'App1.store.App1Store2'
+    ],
+
     models: [
         'App2Model',
         'App1Model'
