@@ -1,0 +1,16 @@
+{
+    "id": "ExtBox1-ext-gen2868",
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "App2Model"
+    },
+    "customConfigs": [],
+    "designerId": "0ec7d58e-3828-4ca5-89a2-129d60fc7a97",
+    "$viewOrder": 0,
+    "expanded": true
+}

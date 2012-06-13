@@ -1,0 +1,69 @@
+{
+    "id": "ExtBox1-ext-gen2810",
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "App2Model",
+            "App1Model"
+        ],
+        "stores": [
+            "App2Store1",
+            "App2Store2",
+            "App2Store3"
+        ],
+        "name": "App2"
+    },
+    "customConfigs": [],
+    "designerId": "application",
+    "$viewOrder": 0,
+    "iconCls": "icon-application",
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen4665",
+            "type": "loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "enabled": true,
+                "paths": "{\"Ext\":\".\",\"App1\":\"../app1/app/\",\"App2\":\"./app/\"}",
+                "designer|userClassName": "Loader"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-loader",
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen5139",
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "var app1Model = Ext.create(\"App1.model.App1Model\");",
+                    "var app1Store1 = Ext.create(\"App1.store.App1Store1\");",
+                    "var app1Store2 = Ext.create(\"App1.store.App1Store2\");",
+                    "var importedModel = Ext.create(\"App2.model.App1Model\");",
+                    "var storeWithApp1Model = Ext.create('App2.store.App2Store3', {model: 'App1.model.App1Model'});",
+                    "console.log(\"App2 - created test models and stores\");"
+                ],
+                "designer|userClassName": "launch"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-basic-function",
+            "expanded": true
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "id": "ExtBox1-ext-gen2810",
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "App1Model"
+        ],
+        "stores": [
+            "App1Store1",
+            "App1Store2"
+        ],
+        "name": "App1"
+    },
+    "customConfigs": [],
+    "designerId": "application",
+    "$viewOrder": 0,
+    "iconCls": "icon-application",
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen7285",
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "var app2Model = Ext.create(\"App2.model.App2Model\");",
+                    "var app2Store1 = Ext.create(\"App2.store.App2Store1\");",
+                    "var app2Store2 = Ext.create(\"App2.store.App2Store2\");",
+                    "var storeWithApp2Model = Ext.create('App1.store.App1Store2', {model: 'App2.model.App2Model'});",
+                    "console.log(\"App1 - created test models and stores\");",
+                    ""
+                ],
+                "designer|userClassName": "launch"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-basic-function",
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen7392",
+            "type": "loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "enabled": true,
+                "paths": "{\"Ext\":\".\",\"App1\":\"./app/\", \"App2\":\"../app2/app/\"}",
+                "designer|userClassName": "Loader"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-loader",
+            "expanded": true
+        }
+    ]
+}

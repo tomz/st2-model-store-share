@@ -1,0 +1,47 @@
+=Sharing models and stores between two Sencha Architect apps.
+
+==Open the Sencha Architect projects under the app1 and app2 directories, and browse through the code.
+
+You will notice that, to share the App2 components in App1, we setup the Ext.Loader as follows:
+
+  Ext.Loader.setConfig({
+      enabled: true,
+      paths: {
+          Ext: '.',
+          App1: '../app1/app/',
+          App2: './app/'
+      }
+  });
+
+And similarly to share App1 components in App2, we do the following:
+
+  Ext.Loader.setConfig({
+      enabled: true,
+      paths: {
+          Ext: '.',
+          App1: './app/',
+          App2: '../app2/app/'
+      }
+  });
+
+
+Also the model in App1 in exported to the file App1Model.xdc, and then imported into App2.
+
+
+==Open the two apps in browser and use JS console to inspect and experiment:
+
+1. in the App1 browser JS console, try the following:
+
+var app2Model = Ext.create("App2.model.App2Model");
+var app2Store1 = Ext.create("App2.store.App2Store1");
+var app2Store2 = Ext.create("App2.store.App2Store2");
+var storeWithApp2Model = Ext.create('App1.store.App1Store2', {model: 'App2.model.App2Model'});
+
+2. in the App2 browser JS console, try the following:
+
+var app1Model = Ext.create("App1.model.App1Model");
+var app1Store1 = Ext.create("App1.store.App1Store1");
+var app1Store2 = Ext.create("App1.store.App1Store2");
+var importedModel = Ext.create("App2.model.App1Model");
+var storeWithApp1Model = Ext.create('App2.store.App2Store3', {model: 'App1.model.App1Model'});
+
