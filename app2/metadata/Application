@@ -52,8 +52,10 @@
             "userConfig": {
                 "fn": "launch",
                 "implHandler": [
-                    "var app1Model = Ext.create(\"App1.model.App1Model\");",
+                    "var app1Model = Ext.create(\"App1.model.App1Model\", {field1:\"value1\", field2:\"value2\"});",
                     "var app1Store1 = Ext.create(\"App1.store.App1Store1\");",
+                    "app1Store1.add(app1Model);",
+                    "app1Store1.getCount();",
                     "var app1Store2 = Ext.create(\"App1.store.App1Store2\");",
                     "var importedModel = Ext.create(\"App2.model.App1Model\");",
                     "var storeWithApp1Model = Ext.create('App2.store.App2Store3', {model: 'App1.model.App1Model'});",

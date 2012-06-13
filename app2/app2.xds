@@ -43,14 +43,6 @@
             ],
             "className": "App2Store2"
         },
-        "36e65c2e-266f-4d3d-ba3d-7832762aec2f": {
-            "paths": [
-                "metadata/model/App1Model",
-                "app/model/override/App1Model.js",
-                "app/model/App1Model.js"
-            ],
-            "className": "App1Model"
-        },
         "f372b81a-066d-46ca-a827-67c71b717695": {
             "paths": [
                 "metadata/store/App2Store3",
@@ -58,6 +50,14 @@
                 "app/store/App2Store3.js"
             ],
             "className": "App2Store3"
+        },
+        "87fe266f-f89c-4442-992b-58a1c022d869": {
+            "paths": [
+                "metadata/model/App1Model",
+                "app/model/override/App1Model.js",
+                "app/model/App1Model.js"
+            ],
+            "className": "App1Model"
         }
     },
     "expandedState": {

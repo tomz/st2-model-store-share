@@ -33,12 +33,13 @@ Ext.application({
     name: 'App1',
 
     launch: function() {
-        var app2Model = Ext.create("App2.model.App2Model");
+        var app2Model = Ext.create("App2.model.App2Model", {field1:"value1", field2:"value2", field3:"value3"});
         var app2Store1 = Ext.create("App2.store.App2Store1");
+        app2Store1.add(app2Model);
+        app2Store1.getCount();
         var app2Store2 = Ext.create("App2.store.App2Store2");
         var storeWithApp2Model = Ext.create('App1.store.App1Store2', {model: 'App2.model.App2Model'});
         console.log("App1 - created test models and stores");
-
     }
 
 });

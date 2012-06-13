@@ -16,5 +16,13 @@
 Ext.define('App1.model.App1Model', {
     extend: 'Ext.data.Model',
     config: {
+        fields: [
+            {
+                name: 'field1'
+            },
+            {
+                name: 'field2'
+            }
+        ]
     }
 });
